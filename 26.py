@@ -1,12 +1,9 @@
-class Solution {
-    public int removeDuplicates(int[] nums) {
-        int l = 1;
-        for(int i=1 ; i < nums.length; i++){
-            if(nums[i] != nums[i - 1]){
-                nums[l] = nums[i];
-                l += 1;
-            }
-        }
-        return l;
-    }
-}
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        l = 1
+        for r in range(1 , len(nums)):
+            if nums[r] != nums[r - 1]:
+                nums[l] = nums[r]
+                l += 1
+        
+        return l
